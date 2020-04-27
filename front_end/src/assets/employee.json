@@ -1,0 +1,19 @@
+{
+    "employees": [
+      {
+        "username": "John",
+        "firstname": "Enginner",
+        "lastname": "India"
+      },
+      {
+        "username": "Doe",
+        "firstname": "Enginner",
+        "lastname": "India"
+      },
+      {
+        "username": "Rina",
+        "firstname": "Enginner",
+        "lastname": "India"
+      }
+    ]
+  }

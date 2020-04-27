@@ -1,0 +1,82 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon" (click)="back()">
+            keyboard_backspace</mat-icon>&nbsp;
+        <span>{{title}}</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<div style="width: 50%;margin: 0 auto;margin-top: 40px;">
+    <mat-card>
+        <form class="example-form" [formGroup]="employeeForm" (ngSubmit)="saveEmployee()">
+            <mat-card-content>
+                <div class="row">
+                    <div class="column">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Enter Username</mat-label>
+                            <input matInput placeholder="" formControlName="username" required>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Enter First Name</mat-label>
+                            <input matInput placeholder="" type="text" formControlName="firstname" required>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Enter Last Name</mat-label>
+                            <input matInput placeholder="" type="text" formControlName="lastname" required>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Enter Email</mat-label>
+                            <input matInput placeholder="" type="email" formControlName="email" required>
+                        
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Description</mat-label>
+                            <input matInput placeholder="" type="text" formControlName="description" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="column">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Basic Salary</mat-label>
+                            <input matInput placeholder="" type="number" formControlName="salary" required>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Status</mat-label>
+                            <input matInput placeholder="" type="text" formControlName="status" required>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Group</mat-label>
+                            <mat-select formControlName="group">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Search</mat-label>
+                                    <input matInput placeholder="" type="text" (input)="filterOptions($event.target.value)">
+                                </mat-form-field>
+                                <mat-option *ngFor="let group of groups" [value]="group.value" id="brow">
+                                    {{group.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Birth Date</mat-label>
+                            <input matInput [matDatepicker]="picker" [max]="todayDate" formControlName="birthdate">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" justify="center" type="submit"
+                            [disabled]="!employeeForm.valid" class="example-full-width">{{ button }}</button>
+                    </div>
+                </div>
+            </mat-card-content>
+
+        </form>
+    </mat-card>
+</div>

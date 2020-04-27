@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  
+  .example-full-width {
+    width: 50%;
+  }
+
+  .example-container {
+    overflow-x: scroll;
+  }
+
+  .mat-table {
+    overflow-x: scroll;
+    overflow: auto;
+  }
+  
+  .mat-cell,
+  .mat-header-cell {
+    word-wrap: initial;
+    display: table-cell;
+    padding: 0px 10px;
+    line-break: unset;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  
+  .mat-row,
+  .mat-header-row {
+    display: table-row;
+  }

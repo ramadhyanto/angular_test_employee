@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon" (click)="back()">keyboard_backspace</mat-icon>&nbsp;
+        <span>Employee Detail</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div style="width: 50%;margin: 0 auto;margin-top: 40px;">
+    <mat-card>
+        <mat-list role="list">
+            <mat-card-content>
+                <div class="row">
+                    <div class="column">
+                        <mat-list-item role="listitem">Username   : {{username}}</mat-list-item>
+                        <mat-list-item role="listitem">First Name : {{firstname}}</mat-list-item>
+                        <mat-list-item role="listitem">Last Name  : {{lastname}}</mat-list-item>
+                        <mat-list-item role="listitem">Email   : {{email}}</mat-list-item>
+                        <mat-list-item role="listitem">Basic Salary : {{basicsalary | currency:"Rp "}}</mat-list-item>
+                    </div>
+                    
+                    <div class="column">
+                        <mat-list-item role="listitem">Status  : {{status}}</mat-list-item>
+                        <mat-list-item role="listitem">Group   : {{grup}}</mat-list-item>
+                        <mat-list-item role="listitem">Birth Date : {{birthdate}}</mat-list-item>
+                        <mat-list-item role="listitem">Descriptions  : {{description}}</mat-list-item>
+                        <button mat-raised-button color="primary" (click)="back()">OK</button> 
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-list>
+    </mat-card>
+</div>
